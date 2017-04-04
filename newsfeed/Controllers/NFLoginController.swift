@@ -12,9 +12,9 @@ import FirebaseAuth
 //MARK: - NFLoginControllerProtocol
 protocol NFLoginControllerProtocol {
     
-    func signUp(_ emailUser: String, passUser: String)
+    func signUp(emailUser: String, passUser: String)
     
-    func signIn(_ emailUser: String, passUser: String)
+    func signIn(emailUser: String, passUser: String)
     
     func nextAfterLogin(performSegueWithIdentifier: String)
     
@@ -35,7 +35,7 @@ class NFLoginController {
         return instance
     }
     
-    func signUp(_ emailUser: String, passUser: String) {
+    func signUp(emailUser: String, passUser: String) {
         FIRAuth.auth()!.createUser(withEmail: emailUser, password: passUser) { user, error in
             if error == nil {
                 self.createAlertWithCustomMessage(title: "Success", message: "Your registration has been successful", actionButtonTitle: "OK", preferredStyle: .alert)
@@ -45,7 +45,7 @@ class NFLoginController {
         }
     }
     
-    func signIn(_ emailUser: String, passUser: String) {
+    func signIn(emailUser: String, passUser: String) {
         FIRAuth.auth()!.signIn(withEmail: emailUser, password: passUser) { entity, error in
             if(error == nil) {
                 self.nextAfterLogin(identifier: self.loginToList)

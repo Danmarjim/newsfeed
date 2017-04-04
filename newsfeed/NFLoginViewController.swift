@@ -35,12 +35,12 @@ class NFLoginViewController: UIViewController  {
     }
     
     // MARK: Actions
-    @IBAction func loginDidTouch(_ sender: AnyObject) {
-        controller.signIn(textFieldLoginEmail.text!, passUser: textFieldLoginPassword.text!)
+    @IBAction func loginDidTouch(sender: AnyObject) {
+        controller.signIn(emailUser: textFieldLoginEmail.text!, passUser: textFieldLoginPassword.text!)
     }
     
-    @IBAction func signUpDidTouch(_ sender: AnyObject) {
-        controller.signUp(textFieldLoginEmail.text!, passUser: textFieldLoginPassword.text!)
+    @IBAction func signUpDidTouch(sender: AnyObject) {
+        controller.signUp(emailUser: textFieldLoginEmail.text!, passUser: textFieldLoginPassword.text!)
     }
 }
 
