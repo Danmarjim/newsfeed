@@ -17,6 +17,8 @@ protocol NFLoginControllerProtocol {
     func signIn(_ emailUser: String, passUser: String)
     
     func nextAfterLogin(performSegueWithIdentifier: String)
+    
+    func createAlertWithCustomMessage(title: String, message: String, actionButtonTitle: String, preferredStyle: UIAlertControllerStyle)
 }
 
 //MARK: - NFLoginController
@@ -24,6 +26,7 @@ class NFLoginController {
     
     static var instance : NFLoginController!
     let loginToList = "LoginToList"
+    var alertError = UIAlertController()
     
     class func sharedInstance() -> NFLoginController {
         if instance == nil {
@@ -35,9 +38,9 @@ class NFLoginController {
     func signUp(_ emailUser: String, passUser: String) {
         FIRAuth.auth()!.createUser(withEmail: emailUser, password: passUser) { user, error in
             if error == nil {
-                //Show alert with message "SIGNUP SUCCESS"
+                self.createAlertWithCustomMessage(title: "Success", message: "Your registration has been successful", actionButtonTitle: "OK", preferredStyle: .alert)
             } else {
-                //Show alert with error message
+                self.createAlertWithCustomMessage(title: "Error", message: (error?.localizedDescription)!, actionButtonTitle: "OK", preferredStyle: .alert)
             }
         }
     }
@@ -47,7 +50,7 @@ class NFLoginController {
             if(error == nil) {
                 self.nextAfterLogin(identifier: self.loginToList)
             } else {
-                //Show alert with error message
+                self.createAlertWithCustomMessage(title: "Error", message: (error?.localizedDescription)!, actionButtonTitle: "OK", preferredStyle: .alert)
             }
         }
     }
@@ -59,8 +62,17 @@ class NFLoginController {
             }
         }
     }
+    
+    func createAlertWithCustomMessage(title: String, message: String, actionButtonTitle: String, preferredStyle: UIAlertControllerStyle) {
+        self.alertError = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+        let defaultAction = UIAlertAction(title: actionButtonTitle, style: .default, handler: nil)
+        
+        self.alertError.addAction(defaultAction)
+        UIApplication.shared.keyWindow?.visibleViewController?.present(self.alertError, animated: true, completion: nil)
+    }
 }
 
+//MARK: - UIWindow extension
 public extension UIWindow {
     
     public var visibleViewController : UIViewController? {

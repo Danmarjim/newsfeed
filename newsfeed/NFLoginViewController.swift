@@ -24,7 +24,7 @@ class NFLoginViewController: UIViewController  {
     }
     
     func setupLayout() {
-        backgroundView.backgroundColor = Style.primaryBackgroundColor
+        backgroundView.backgroundColor = Style.primaryColor
         titleLabel.font = Style.fontTitleLogin
         
         textFieldLoginEmail.placeholder = "Email"
