@@ -40,7 +40,14 @@ class NFLoginViewController: NFBaseViewController  {
         titleLabel.textColor = Style.secondColor
         
         textFieldLoginEmail.font = Style.fontPlaceholderLogin
+        textFieldLoginEmail.layer.borderColor = Style.firstColor.cgColor
+        textFieldLoginEmail.layer.borderWidth = 0.5
+        textFieldLoginEmail.layer.cornerRadius = 8
+        
         textFieldLoginPassword.font = Style.fontPlaceholderLogin
+        textFieldLoginPassword.layer.borderColor = Style.firstColor.cgColor
+        textFieldLoginPassword.layer.borderWidth = 0.5
+        textFieldLoginPassword.layer.cornerRadius = 8
         
         buttonSignIn.backgroundColor = Style.secondColor
         buttonSignIn.layer.cornerRadius = 15
