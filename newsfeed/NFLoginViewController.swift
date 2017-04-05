@@ -16,6 +16,8 @@ class NFLoginViewController: UIViewController  {
     @IBOutlet var textFieldLoginEmail: UITextField!
     @IBOutlet var textFieldLoginPassword: UITextField!    
     @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var buttonSignIn: UIButton!
+    @IBOutlet var buttonSignUp: UIButton!
     
     var controller = NFLoginController.sharedInstance()
     
@@ -32,7 +34,7 @@ class NFLoginViewController: UIViewController  {
     
     // MARK: Layouts
     func setupLayout() {
-        backgroundView.backgroundColor = Style.primaryColor
+        backgroundView.backgroundColor = Style.firstColor
         titleLabel.font = Style.fontTitleLogin
         
         textFieldLoginEmail.placeholder = "Email"
@@ -41,7 +43,13 @@ class NFLoginViewController: UIViewController  {
         textFieldLoginPassword.placeholder = "Password"
         textFieldLoginPassword.font = Style.fontPlaceholderLogin
         
+        buttonSignIn.backgroundColor = Style.secondColor
+        buttonSignIn.layer.cornerRadius = 15
         
+        buttonSignUp.layer.cornerRadius = 15
+        buttonSignUp.layer.borderWidth = 2
+        buttonSignUp.layer.borderColor = Style.thirdColor.cgColor
+        //buttonSignUp.title
     }
     
     // MARK: Actions

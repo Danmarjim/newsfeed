@@ -103,6 +103,8 @@
                     <navigationItem key="navigationItem" id="ZpN-ii-GL2"/>
                     <connections>
                         <outlet property="backgroundView" destination="Z7m-WV-P2H" id="P2U-xq-YpK"/>
+                        <outlet property="buttonSignIn" destination="mwR-M8-TBn" id="r4t-3O-CON"/>
+                        <outlet property="buttonSignUp" destination="KDI-0L-q9f" id="rA6-kU-Qv9"/>
                         <outlet property="scrollView" destination="P3a-oN-nO5" id="Y9D-qO-uvu"/>
                         <outlet property="textFieldLoginEmail" destination="a1b-R6-EyX" id="fbi-wL-l1P"/>
                         <outlet property="textFieldLoginPassword" destination="lHo-SY-WFr" id="nXz-aC-XuH"/>
