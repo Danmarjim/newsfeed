@@ -40,6 +40,8 @@ class NFLoginViewController: UIViewController  {
         
         textFieldLoginPassword.placeholder = "Password"
         textFieldLoginPassword.font = Style.fontPlaceholderLogin
+        
+        
     }
     
     // MARK: Actions

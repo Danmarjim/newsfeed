@@ -58,7 +58,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="loginDidTouch:" destination="2rI-aM-NCm" eventType="touchUpInside" id="van-by-YJk"/>
+                                            <action selector="loginDidTouchWithSender:" destination="2rI-aM-NCm" eventType="touchUpInside" id="ZyW-fx-fyj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDI-0L-q9f">
@@ -67,9 +67,11 @@
                                             <constraint firstAttribute="width" constant="255" id="Bw7-Dw-HYk"/>
                                             <constraint firstAttribute="height" constant="40" id="sGq-IH-yTo"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
-                                            <action selector="signUpDidTouch:" destination="2rI-aM-NCm" eventType="touchUpInside" id="tZw-we-Dev"/>
+                                            <action selector="signUpDidTouchWithSender:" destination="2rI-aM-NCm" eventType="touchUpInside" id="2cn-Od-Rxq"/>
                                         </connections>
                                     </button>
                                 </subviews>

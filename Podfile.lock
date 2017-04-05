@@ -1,4 +1,5 @@
 PODS:
+  - APESuperHUD (1.1.2)
   - Firebase/Auth (3.15.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
@@ -34,11 +35,22 @@ PODS:
   - GTMSessionFetcher/Core (1.1.9)
 
 DEPENDENCIES:
+  - APESuperHUD (from `https://github.com/apegroup/APESuperHUD.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
 
+EXTERNAL SOURCES:
+  APESuperHUD:
+    :git: https://github.com/apegroup/APESuperHUD.git
+
+CHECKOUT OPTIONS:
+  APESuperHUD:
+    :commit: c93268c65dc888f9140eb7a5ed9dd987c55d6fdf
+    :git: https://github.com/apegroup/APESuperHUD.git
+
 SPEC CHECKSUMS:
+  APESuperHUD: 9c7ea17cea21b4a9212f1c43810b0c8b9ee585a6
   Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -48,6 +60,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
 
-PODFILE CHECKSUM: d00d64161425d88da20f038788462343f051e6bc
+PODFILE CHECKSUM: d9bb98b026a09bc1701e96677ce6e4ed46d923fb
 
 COCOAPODS: 1.2.0

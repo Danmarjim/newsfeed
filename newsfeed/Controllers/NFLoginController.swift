@@ -17,16 +17,13 @@ protocol NFLoginControllerProtocol {
     func signIn(emailUser: String, passUser: String)
     
     func nextAfterLogin(performSegueWithIdentifier: String)
-    
-    func createAlertWithCustomMessage(title: String, message: String, actionButtonTitle: String, preferredStyle: UIAlertControllerStyle)
 }
 
 //MARK: - NFLoginController
-class NFLoginController {
+class NFLoginController : NFBaseController{
     
     static var instance : NFLoginController!
     let loginToList = "LoginToList"
-    var alertError = UIAlertController()
     
     class func sharedInstance() -> NFLoginController {
         if instance == nil {
@@ -36,7 +33,9 @@ class NFLoginController {
     }
     
     func signUp(emailUser: String, passUser: String) {
+        super.showLoadingIndicator()
         FIRAuth.auth()!.createUser(withEmail: emailUser, password: passUser) { user, error in
+            super.hideLoadingIndicator()
             if error == nil {
                 self.createAlertWithCustomMessage(title: "Success", message: "Your registration has been successful", actionButtonTitle: "OK", preferredStyle: .alert)
             } else {
@@ -59,36 +58,6 @@ class NFLoginController {
         FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
             if user != nil {
                 UIApplication.shared.keyWindow?.visibleViewController?.performSegue(withIdentifier: identifier, sender: nil)
-            }
-        }
-    }
-    
-    func createAlertWithCustomMessage(title: String, message: String, actionButtonTitle: String, preferredStyle: UIAlertControllerStyle) {
-        self.alertError = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
-        let defaultAction = UIAlertAction(title: actionButtonTitle, style: .default, handler: nil)
-        
-        self.alertError.addAction(defaultAction)
-        UIApplication.shared.keyWindow?.visibleViewController?.present(self.alertError, animated: true, completion: nil)
-    }
-}
-
-//MARK: - UIWindow extension
-public extension UIWindow {
-    
-    public var visibleViewController : UIViewController? {
-        return UIWindow.getVisibleViewControllerFrom(self.rootViewController)
-    }
-    
-    public static func getVisibleViewControllerFrom(_ vc: UIViewController?) -> UIViewController? {
-        if let nc = vc as? UINavigationController {
-            return UIWindow.getVisibleViewControllerFrom(nc.visibleViewController)
-        } else if let tc = vc as? UITabBarController {
-            return UIWindow.getVisibleViewControllerFrom(tc.selectedViewController)
-        } else {
-            if let pvc = vc?.presentedViewController {
-                return UIWindow.getVisibleViewControllerFrom(pvc)
-            } else {
-                return vc
             }
         }
     }

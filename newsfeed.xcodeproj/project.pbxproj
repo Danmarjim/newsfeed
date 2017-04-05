@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2ABAFC443F70903EF30E3DA5 /* Pods_newsfeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31858B59F50A9FA8BD0C28BB /* Pods_newsfeed.framework */; };
+		8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619C9D11E94ED2400A468D9 /* NFBaseController.swift */; };
 		86B59EC21E93807400A95F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B59EC11E93807400A95F67 /* AppDelegate.swift */; };
 		86B59EC71E93807400A95F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B59EC51E93807400A95F67 /* Main.storyboard */; };
 		86B59EC91E93807400A95F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B59EC81E93807400A95F67 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		31858B59F50A9FA8BD0C28BB /* Pods_newsfeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsfeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8619C9D11E94ED2400A468D9 /* NFBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseController.swift; sourceTree = "<group>"; };
 		86B59EBE1E93807400A95F67 /* newsfeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsfeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B59EC11E93807400A95F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		86B59EC61E93807400A95F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				86F02E281E93DA7B008EAC89 /* NFLoginController.swift */,
+				8619C9D11E94ED2400A468D9 /* NFBaseController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */,
 				86F02E1D1E93A8E2008EAC89 /* NFLoginViewController.swift in Sources */,
 				86F02E291E93DA7B008EAC89 /* NFLoginController.swift in Sources */,
 				86F02E1F1E93AAF5008EAC89 /* Style.swift in Sources */,

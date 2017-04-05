@@ -9,4 +9,6 @@ target 'newsfeed' do
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
     
+    pod 'APESuperHUD', :git => 'https://github.com/apegroup/APESuperHUD.git'
+    
 end

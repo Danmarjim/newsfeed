@@ -13,6 +13,7 @@ struct Style {
     
     //Colors
     static var primaryColor = UIColor(red: 198/255, green: 40/255, blue: 40/255, alpha: 1.0)
+    static var secondaryColor = UIColor(red: 48/255, green: 63/255, blue: 159/255, alpha: 1.0)
     
     //Fonts NFLogin
     static var fontTitleLogin = UIFont (name: "Avenir-Light", size: 50)
