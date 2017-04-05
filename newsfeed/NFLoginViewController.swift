@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class NFLoginViewController: UIViewController  {
+class NFLoginViewController: NFBaseViewController  {
     
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var titleLabel: UILabel!
@@ -26,6 +26,8 @@ class NFLoginViewController: UIViewController  {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tap(gesture:)))
+        self.view.addGestureRecognizer(tapGesture)
         
         self.textFieldLoginEmail.delegate = self
         self.textFieldLoginPassword.delegate = self
@@ -34,13 +36,10 @@ class NFLoginViewController: UIViewController  {
     
     // MARK: Layouts
     func setupLayout() {
-        backgroundView.backgroundColor = Style.firstColor
         titleLabel.font = Style.fontTitleLogin
+        titleLabel.textColor = Style.secondColor
         
-        textFieldLoginEmail.placeholder = "Email"
         textFieldLoginEmail.font = Style.fontPlaceholderLogin
-        
-        textFieldLoginPassword.placeholder = "Password"
         textFieldLoginPassword.font = Style.fontPlaceholderLogin
         
         buttonSignIn.backgroundColor = Style.secondColor
@@ -49,7 +48,7 @@ class NFLoginViewController: UIViewController  {
         buttonSignUp.layer.cornerRadius = 15
         buttonSignUp.layer.borderWidth = 2
         buttonSignUp.layer.borderColor = Style.thirdColor.cgColor
-        //buttonSignUp.title
+        buttonSignUp.setTitleColor(Style.thirdColor, for: .normal)
     }
     
     // MARK: Actions
@@ -92,5 +91,10 @@ extension NFLoginViewController {
     func keyboardWillHide(notification:NSNotification) {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         self.scrollView.contentInset = contentInset
+    }
+    
+    func tap(gesture: UITapGestureRecognizer) {
+        textFieldLoginEmail.resignFirstResponder()
+        textFieldLoginPassword.resignFirstResponder()
     }
 }
