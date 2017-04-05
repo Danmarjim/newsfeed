@@ -9,12 +9,20 @@
 import UIKit
 
 class NFFeedListViewController: UIViewController {
-
+    
+    var controller = NFFeedListController.sharedInstance()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        getFeeds()
         setupLayout()
     }
+    
+    func getFeeds() {
+        controller.getFeeds()
+    }
+    
     
     func setupLayout() {
         

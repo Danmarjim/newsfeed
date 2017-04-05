@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="1022" y="143"/>
         </scene>
-        <!--View Controller-->
+        <!--Feed List View Controller-->
         <scene sceneID="WDA-aj-cuF">
             <objects>
-                <viewController id="y3t-uk-d2j" sceneMemberID="viewController">
+                <viewController id="y3t-uk-d2j" customClass="NFFeedListViewController" customModule="newsfeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xVc-yu-7VL"/>
                         <viewControllerLayoutGuide type="bottom" id="HtI-dl-4fp"/>

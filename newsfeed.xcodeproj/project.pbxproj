@@ -11,6 +11,7 @@
 		8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619C9D11E94ED2400A468D9 /* NFBaseController.swift */; };
 		8619C9D41E9538CF00A468D9 /* NFFeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619C9D31E9538CF00A468D9 /* NFFeedListViewController.swift */; };
 		8619C9D61E953DC200A468D9 /* NFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619C9D51E953DC200A468D9 /* NFBaseViewController.swift */; };
+		86396FF01E954B7A00FEFDA8 /* NFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */; };
 		86B59EC21E93807400A95F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B59EC11E93807400A95F67 /* AppDelegate.swift */; };
 		86B59EC71E93807400A95F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B59EC51E93807400A95F67 /* Main.storyboard */; };
 		86B59EC91E93807400A95F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B59EC81E93807400A95F67 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		8619C9D11E94ED2400A468D9 /* NFBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseController.swift; sourceTree = "<group>"; };
 		8619C9D31E9538CF00A468D9 /* NFFeedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListViewController.swift; sourceTree = "<group>"; };
 		8619C9D51E953DC200A468D9 /* NFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseViewController.swift; sourceTree = "<group>"; };
+		86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListController.swift; sourceTree = "<group>"; };
 		86B59EBE1E93807400A95F67 /* newsfeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsfeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B59EC11E93807400A95F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		86B59EC61E93807400A95F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				86F02E281E93DA7B008EAC89 /* NFLoginController.swift */,
 				8619C9D11E94ED2400A468D9 /* NFBaseController.swift */,
+				86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				86F02E1D1E93A8E2008EAC89 /* NFLoginViewController.swift in Sources */,
 				8619C9D61E953DC200A468D9 /* NFBaseViewController.swift in Sources */,
 				86F02E291E93DA7B008EAC89 /* NFLoginController.swift in Sources */,
+				86396FF01E954B7A00FEFDA8 /* NFFeedListController.swift in Sources */,
 				86F02E1F1E93AAF5008EAC89 /* Style.swift in Sources */,
 				86F02E251E93B32A008EAC89 /* NFUser.swift in Sources */,
 				86B59EC21E93807400A95F67 /* AppDelegate.swift in Sources */,
