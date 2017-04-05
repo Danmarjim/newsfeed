@@ -14,15 +14,23 @@ class NFLoginViewController: UIViewController  {
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var textFieldLoginEmail: UITextField!
-    @IBOutlet var textFieldLoginPassword: UITextField!
+    @IBOutlet var textFieldLoginPassword: UITextField!    
+    @IBOutlet var scrollView: UIScrollView!
     
     var controller = NFLoginController.sharedInstance()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        self.textFieldLoginEmail.delegate = self
+        self.textFieldLoginPassword.delegate = self
         setupLayout()
     }
     
+    // MARK: Layouts
     func setupLayout() {
         backgroundView.backgroundColor = Style.primaryColor
         titleLabel.font = Style.fontTitleLogin
@@ -44,6 +52,7 @@ class NFLoginViewController: UIViewController  {
     }
 }
 
+//MARK: TextField Delegate
 extension NFLoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -54,5 +63,24 @@ extension NFLoginViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+}
+
+//MARK: Keyboard Actions
+extension NFLoginViewController {
+    
+    func keyboardWillShow(notification:NSNotification) {
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.scrollView.contentInset = contentInset
+    }
+    
+    func keyboardWillHide(notification:NSNotification) {
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.scrollView.contentInset = contentInset
     }
 }
