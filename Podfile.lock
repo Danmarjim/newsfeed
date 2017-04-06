@@ -33,21 +33,28 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - APESuperHUD (from `https://github.com/apegroup/APESuperHUD.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
   APESuperHUD:
     :git: https://github.com/apegroup/APESuperHUD.git
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   APESuperHUD:
     :commit: c93268c65dc888f9140eb7a5ed9dd987c55d6fdf
     :git: https://github.com/apegroup/APESuperHUD.git
+  SwiftyJSON:
+    :commit: 74cda0fa5ae0be109b60a7dad396bcf92a9d5a13
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   APESuperHUD: 9c7ea17cea21b4a9212f1c43810b0c8b9ee585a6
@@ -59,7 +66,8 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  SwiftyJSON: 05cf0e98a950e2ba343735264f5a96b81e755d00
 
-PODFILE CHECKSUM: d9bb98b026a09bc1701e96677ce6e4ed46d923fb
+PODFILE CHECKSUM: 4640098927e0ad9dd426207c46f26c40af377d60
 
 COCOAPODS: 1.2.0

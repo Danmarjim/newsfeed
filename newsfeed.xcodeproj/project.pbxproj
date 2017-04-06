@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2ABAFC443F70903EF30E3DA5 /* Pods_newsfeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31858B59F50A9FA8BD0C28BB /* Pods_newsfeed.framework */; };
+		8614C5FE1E968EEA00096161 /* NFFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614C5FD1E968EEA00096161 /* NFFeed.swift */; };
+		8614C6001E96901E00096161 /* NFPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614C5FF1E96901E00096161 /* NFPeople.swift */; };
 		8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619C9D11E94ED2400A468D9 /* NFBaseController.swift */; };
 		86396FF01E954B7A00FEFDA8 /* NFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */; };
 		868102291E9667E400339637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868102251E9667E400339637 /* LaunchScreen.storyboard */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		31858B59F50A9FA8BD0C28BB /* Pods_newsfeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsfeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8614C5FD1E968EEA00096161 /* NFFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeed.swift; sourceTree = "<group>"; };
+		8614C5FF1E96901E00096161 /* NFPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFPeople.swift; sourceTree = "<group>"; };
 		8619C9D11E94ED2400A468D9 /* NFBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseController.swift; sourceTree = "<group>"; };
 		86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListController.swift; sourceTree = "<group>"; };
 		868102261E9667E400339637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = newsfeed/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -78,6 +82,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8614C5FA1E968CF700096161 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		86979E581E965D53001B28B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +122,7 @@
 		86B59EC01E93807400A95F67 /* newsfeed */ = {
 			isa = PBXGroup;
 			children = (
+				8614C5FA1E968CF700096161 /* Components */,
 				86F02E211E93B2A9008EAC89 /* Models */,
 				86979E581E965D53001B28B8 /* Views */,
 				86F02E261E93BB9C008EAC89 /* Controllers */,
@@ -156,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				86F02E241E93B32A008EAC89 /* NFUser.swift */,
+				8614C5FD1E968EEA00096161 /* NFFeed.swift */,
+				8614C5FF1E96901E00096161 /* NFPeople.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86979E621E965D53001B28B8 /* NFLoginViewController.swift in Sources */,
+				8614C5FE1E968EEA00096161 /* NFFeed.swift in Sources */,
 				8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */,
 				86DF70591E965B42009D4285 /* Style.swift in Sources */,
 				86F02E291E93DA7B008EAC89 /* NFLoginController.swift in Sources */,
@@ -310,6 +325,7 @@
 				86979E611E965D53001B28B8 /* NFFeedListViewController.swift in Sources */,
 				86DF70581E965B42009D4285 /* AppDelegate.swift in Sources */,
 				86F02E251E93B32A008EAC89 /* NFUser.swift in Sources */,
+				8614C6001E96901E00096161 /* NFPeople.swift in Sources */,
 				86979E601E965D53001B28B8 /* NFBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

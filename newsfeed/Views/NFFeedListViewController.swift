@@ -11,18 +11,25 @@ import UIKit
 class NFFeedListViewController: UIViewController {
     
     var controller = NFFeedListController.sharedInstance()
+    var items: [NFFeed] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         getFeeds()
         setupLayout()
+        setupNavigation()
     }
     
     func getFeeds() {
-        controller.getFeeds()
+        items = controller.getFeeds()
     }
     
+    func setupNavigation() {
+        navigationController?.navigationBar.barTintColor = Style.secondColor
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: Style.fontTextNavBar!]        
+        title = "News"
+    }    
     
     func setupLayout() {
         

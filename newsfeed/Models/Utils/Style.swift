@@ -23,4 +23,7 @@ struct Style {
     static var fontTitleLogin = UIFont (name: "Rondalo", size: 50)
     static var fontPlaceholderLogin = UIFont (name: "OCRB10PitchBT-Regular", size: 16)
     static var fontTextButtonLogin = UIFont (name: "OCRB10PitchBT-Regular", size: 18)
+    
+    //Fonts NavBar
+    static var fontTextNavBar = UIFont (name: "OCRB10PitchBT-Regular", size: 24)
 }

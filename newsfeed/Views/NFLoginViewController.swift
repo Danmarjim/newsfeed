@@ -19,6 +19,8 @@ class NFLoginViewController: NFBaseViewController  {
     @IBOutlet var buttonSignIn: UIButton!
     @IBOutlet var buttonSignUp: UIButton!
     
+    var tapGesture: UITapGestureRecognizer!
+    
     var controller = NFLoginController.sharedInstance()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,7 +28,7 @@ class NFLoginViewController: NFBaseViewController  {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tap(gesture:)))
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tap(gesture:)))
         self.view.addGestureRecognizer(tapGesture)
         
         self.textFieldLoginEmail.delegate = self
@@ -65,10 +67,12 @@ class NFLoginViewController: NFBaseViewController  {
     
     // MARK: Actions
     @IBAction func loginDidTouch(sender: AnyObject) {
+        tap(gesture: tapGesture)
         controller.signIn(emailUser: textFieldLoginEmail.text!, passUser: textFieldLoginPassword.text!)
     }
     
     @IBAction func signUpDidTouch(sender: AnyObject) {
+        tap(gesture: tapGesture)
         controller.signUp(emailUser: textFieldLoginEmail.text!, passUser: textFieldLoginPassword.text!)
     }
 }

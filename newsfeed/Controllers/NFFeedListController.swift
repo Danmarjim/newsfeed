@@ -19,6 +19,8 @@ class NFFeedListController: NFBaseController {
     static var instance : NFFeedListController!
     let rootRef = FIRDatabase.database().reference(fromURL: "https://newsfeed-fd60a.firebaseio.com/")
     
+    var items: [NFFeed] = []
+    
     class func sharedInstance() -> NFFeedListController {
         if instance == nil {
             instance = NFFeedListController()
@@ -26,11 +28,18 @@ class NFFeedListController: NFBaseController {
         return instance
     }
     
-    func getFeeds() {
+    func getFeeds() -> Array<NFFeed> {
         super.showLoadingIndicator()
-        self.rootRef.observe(FIRDataEventType.value, with: { (FIRDataSnapshot) in
+        self.rootRef.observe(FIRDataEventType.value, with: { snapshot in
             super.hideLoadingIndicator()
-            _ = FIRDataSnapshot.value as! [String : AnyObject]
+            
+            var newItems: [NFFeed] = []
+            for item in snapshot.children {
+                let feed = NFFeed(snapshot: item as! FIRDataSnapshot)
+                newItems.append(feed)
+            }
+            self.items = newItems
         })
+        return items
     }
 }

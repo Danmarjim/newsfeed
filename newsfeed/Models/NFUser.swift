@@ -23,5 +23,4 @@ struct NFUser {
         self.uid = uid
         self.email = email
     }
-    
 }

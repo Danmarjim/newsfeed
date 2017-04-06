@@ -34,7 +34,7 @@ class NFLoginController : NFBaseController{
     
     func signUp(emailUser: String, passUser: String) {
         super.showLoadingIndicator()
-        FIRAuth.auth()!.createUser(withEmail: emailUser, password: passUser) { user, error in
+        FIRAuth.auth()!.createUser(withEmail: emailUser, password: passUser) { snapshot, error in
             super.hideLoadingIndicator()
             if error == nil {
                 self.signIn(emailUser: emailUser, passUser: passUser)
@@ -45,7 +45,9 @@ class NFLoginController : NFBaseController{
     }
     
     func signIn(emailUser: String, passUser: String) {
-        FIRAuth.auth()!.signIn(withEmail: emailUser, password: passUser) { entity, error in
+        super.showLoadingIndicator()
+        FIRAuth.auth()!.signIn(withEmail: emailUser, password: passUser) { snapshot, error in
+            super.hideLoadingIndicator()
             if(error == nil) {
                 self.nextAfterLogin(identifier: self.loginToList)
             } else {

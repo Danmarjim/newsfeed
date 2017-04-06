@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2rI-aM-NCm">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2rI-aM-NCm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -120,7 +120,10 @@
         <scene sceneID="OK2-eJ-Z6J">
             <objects>
                 <navigationController id="ArK-xW-KMm" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EFf-Q6-GG4">
+                    <navigationItem key="navigationItem" id="aub-tn-dAc"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EFf-Q6-GG4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -130,7 +133,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kit-He-CkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="143"/>
+            <point key="canvasLocation" x="916" y="143"/>
         </scene>
         <!--Feed List View Controller-->
         <scene sceneID="WDA-aj-cuF">
@@ -143,13 +146,25 @@
                     <view key="view" contentMode="scaleToFill" id="ueh-gA-wg4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpf-Zt-yos">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Kpf-Zt-yos" secondAttribute="trailing" id="4BM-6g-OXw"/>
+                            <constraint firstItem="HtI-dl-4fp" firstAttribute="top" secondItem="Kpf-Zt-yos" secondAttribute="bottom" id="CBp-OK-0Qa"/>
+                            <constraint firstItem="Kpf-Zt-yos" firstAttribute="leading" secondItem="ueh-gA-wg4" secondAttribute="leading" id="PWc-fU-x0T"/>
+                            <constraint firstItem="Kpf-Zt-yos" firstAttribute="top" secondItem="xVc-yu-7VL" secondAttribute="bottom" id="YbJ-o0-0sI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k87-fP-TdY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUE-t9-480" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863" y="143"/>
+            <point key="canvasLocation" x="1666" y="143"/>
         </scene>
     </scenes>
 </document>
