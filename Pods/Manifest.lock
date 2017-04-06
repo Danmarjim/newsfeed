@@ -33,14 +33,12 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
-  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - APESuperHUD (from `https://github.com/apegroup/APESuperHUD.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
-  - SwiftyJSON
 
 EXTERNAL SOURCES:
   APESuperHUD:
@@ -61,8 +59,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 1409c74b9817845cf3dfd9ee4e1615742fd29ef0
+PODFILE CHECKSUM: d9bb98b026a09bc1701e96677ce6e4ed46d923fb
 
 COCOAPODS: 1.2.0

@@ -12,9 +12,9 @@ import UIKit
 struct Style {
     
     //Colors
-    static var firstColor = UIColor(red: 198/255, green: 40/255, blue: 40/255, alpha: 1.0)
-    static var secondColor = UIColor(red: 245/255, green: 124/255, blue: 0/255, alpha: 1.0)
-    static var thirdColor = UIColor(red: 56/255, green: 142/255, blue: 60/255, alpha: 1.0)
+    static var firstColor = UIColor(red: 61/255, green: 181/255, blue: 189/255, alpha: 1.0)
+    static var secondColor = UIColor(red: 0/255, green: 168/255, blue: 126/255, alpha: 1.0)
+    static var thirdColor = UIColor(red: 252/255, green: 91/255, blue: 32/255, alpha: 1.0)
     
     //Fonts NFLogin
     static var fontTitleLogin = UIFont (name: "Avenir-Light", size: 50)
