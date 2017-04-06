@@ -29,7 +29,7 @@ class NFBaseController {
     }
     
     func hideLoadingIndicator() {
-        APESuperHUD.removeHUD(animated: true, presentingView: (UIApplication.shared.keyWindow?.visibleViewController?.view)!, completion: nil)
+        APESuperHUD.removeHUD(animated: false, presentingView: (UIApplication.shared.keyWindow?.visibleViewController?.view)!, completion: nil)
     }
     
     func createAlertWithCustomMessage(title: String, message: String, actionButtonTitle: String, preferredStyle: UIAlertControllerStyle) {
