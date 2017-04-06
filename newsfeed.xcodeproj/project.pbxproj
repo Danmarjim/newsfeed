@@ -10,13 +10,17 @@
 		2ABAFC443F70903EF30E3DA5 /* Pods_newsfeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31858B59F50A9FA8BD0C28BB /* Pods_newsfeed.framework */; };
 		8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619C9D11E94ED2400A468D9 /* NFBaseController.swift */; };
 		86396FF01E954B7A00FEFDA8 /* NFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */; };
+		86979E5E1E965D53001B28B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86979E591E965D53001B28B8 /* LaunchScreen.storyboard */; };
+		86979E5F1E965D53001B28B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86979E5A1E965D53001B28B8 /* Main.storyboard */; };
+		86979E601E965D53001B28B8 /* NFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979E5B1E965D53001B28B8 /* NFBaseViewController.swift */; };
+		86979E611E965D53001B28B8 /* NFFeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979E5C1E965D53001B28B8 /* NFFeedListViewController.swift */; };
+		86979E621E965D53001B28B8 /* NFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979E5D1E965D53001B28B8 /* NFLoginViewController.swift */; };
 		86B59EC91E93807400A95F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B59EC81E93807400A95F67 /* Assets.xcassets */; };
 		86B59ED41E9380AD00A95F67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86B59ED31E9380AD00A95F67 /* GoogleService-Info.plist */; };
 		86DF70581E965B42009D4285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF70511E965B42009D4285 /* AppDelegate.swift */; };
 		86DF70591E965B42009D4285 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF70531E965B42009D4285 /* Style.swift */; };
-		86DF705A1E965B42009D4285 /* NFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF70551E965B42009D4285 /* NFBaseViewController.swift */; };
-		86DF705B1E965B42009D4285 /* NFFeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF70561E965B42009D4285 /* NFFeedListViewController.swift */; };
-		86DF705C1E965B42009D4285 /* NFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF70571E965B42009D4285 /* NFLoginViewController.swift */; };
+		86DF70601E965BAD009D4285 /* OCR-b.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86DF705E1E965BAD009D4285 /* OCR-b.ttf */; };
+		86DF70611E965BAD009D4285 /* rondalo-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86DF705F1E965BAD009D4285 /* rondalo-regular.ttf */; };
 		86F02E251E93B32A008EAC89 /* NFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F02E241E93B32A008EAC89 /* NFUser.swift */; };
 		86F02E291E93DA7B008EAC89 /* NFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F02E281E93DA7B008EAC89 /* NFLoginController.swift */; };
 /* End PBXBuildFile section */
@@ -25,15 +29,19 @@
 		31858B59F50A9FA8BD0C28BB /* Pods_newsfeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsfeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8619C9D11E94ED2400A468D9 /* NFBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseController.swift; sourceTree = "<group>"; };
 		86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListController.swift; sourceTree = "<group>"; };
+		86979E591E965D53001B28B8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86979E5A1E965D53001B28B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		86979E5B1E965D53001B28B8 /* NFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseViewController.swift; sourceTree = "<group>"; };
+		86979E5C1E965D53001B28B8 /* NFFeedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListViewController.swift; sourceTree = "<group>"; };
+		86979E5D1E965D53001B28B8 /* NFLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLoginViewController.swift; sourceTree = "<group>"; };
 		86B59EBE1E93807400A95F67 /* newsfeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsfeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B59EC81E93807400A95F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86B59ECD1E93807400A95F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86B59ED31E9380AD00A95F67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		86DF70511E965B42009D4285 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86DF70531E965B42009D4285 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		86DF70551E965B42009D4285 /* NFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseViewController.swift; sourceTree = "<group>"; };
-		86DF70561E965B42009D4285 /* NFFeedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListViewController.swift; sourceTree = "<group>"; };
-		86DF70571E965B42009D4285 /* NFLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLoginViewController.swift; sourceTree = "<group>"; };
+		86DF705E1E965BAD009D4285 /* OCR-b.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OCR-b.ttf"; sourceTree = "<group>"; };
+		86DF705F1E965BAD009D4285 /* rondalo-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rondalo-regular.ttf"; sourceTree = "<group>"; };
 		86F02E241E93B32A008EAC89 /* NFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFUser.swift; sourceTree = "<group>"; };
 		86F02E271E93D8FE008EAC89 /* newsfeed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = newsfeed.entitlements; sourceTree = "<group>"; };
 		86F02E281E93DA7B008EAC89 /* NFLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLoginController.swift; sourceTree = "<group>"; };
@@ -70,6 +78,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		86979E581E965D53001B28B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86979E591E965D53001B28B8 /* LaunchScreen.storyboard */,
+				86979E5A1E965D53001B28B8 /* Main.storyboard */,
+				86979E5B1E965D53001B28B8 /* NFBaseViewController.swift */,
+				86979E5C1E965D53001B28B8 /* NFFeedListViewController.swift */,
+				86979E5D1E965D53001B28B8 /* NFLoginViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		86B59EB51E93807400A95F67 = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				86F02E211E93B2A9008EAC89 /* Models */,
-				86DF70541E965B42009D4285 /* Views */,
+				86979E581E965D53001B28B8 /* Views */,
 				86F02E261E93BB9C008EAC89 /* Controllers */,
 				86DF70501E965B42009D4285 /* Others */,
 				86DF70521E965B42009D4285 /* Utils */,
@@ -116,21 +136,20 @@
 		86DF70521E965B42009D4285 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				86DF705D1E965BAD009D4285 /* Fonts */,
 				86DF70531E965B42009D4285 /* Style.swift */,
 			);
 			name = Utils;
 			path = Models/Utils;
 			sourceTree = "<group>";
 		};
-		86DF70541E965B42009D4285 /* Views */ = {
+		86DF705D1E965BAD009D4285 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				86DF70551E965B42009D4285 /* NFBaseViewController.swift */,
-				86DF70561E965B42009D4285 /* NFFeedListViewController.swift */,
-				86DF70571E965B42009D4285 /* NFLoginViewController.swift */,
+				86DF705E1E965BAD009D4285 /* OCR-b.ttf */,
+				86DF705F1E965BAD009D4285 /* rondalo-regular.ttf */,
 			);
-			name = Views;
-			path = Models/Views;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		86F02E211E93B2A9008EAC89 /* Models */ = {
@@ -219,7 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86DF70601E965BAD009D4285 /* OCR-b.ttf in Resources */,
+				86DF70611E965BAD009D4285 /* rondalo-regular.ttf in Resources */,
 				86B59ED41E9380AD00A95F67 /* GoogleService-Info.plist in Resources */,
+				86979E5F1E965D53001B28B8 /* Main.storyboard in Resources */,
+				86979E5E1E965D53001B28B8 /* LaunchScreen.storyboard in Resources */,
 				86B59EC91E93807400A95F67 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,15 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86DF705C1E965B42009D4285 /* NFLoginViewController.swift in Sources */,
+				86979E621E965D53001B28B8 /* NFLoginViewController.swift in Sources */,
 				8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */,
 				86DF70591E965B42009D4285 /* Style.swift in Sources */,
 				86F02E291E93DA7B008EAC89 /* NFLoginController.swift in Sources */,
 				86396FF01E954B7A00FEFDA8 /* NFFeedListController.swift in Sources */,
-				86DF705B1E965B42009D4285 /* NFFeedListViewController.swift in Sources */,
+				86979E611E965D53001B28B8 /* NFFeedListViewController.swift in Sources */,
 				86DF70581E965B42009D4285 /* AppDelegate.swift in Sources */,
 				86F02E251E93B32A008EAC89 /* NFUser.swift in Sources */,
-				86DF705A1E965B42009D4285 /* NFBaseViewController.swift in Sources */,
+				86979E601E965D53001B28B8 /* NFBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

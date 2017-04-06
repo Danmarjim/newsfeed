@@ -51,10 +51,12 @@ class NFLoginViewController: NFBaseViewController  {
         
         buttonSignIn.backgroundColor = Style.secondColor
         buttonSignIn.layer.cornerRadius = 15
+        buttonSignIn.titleLabel?.font = Style.fontPlaceholderLogin
         
         buttonSignUp.layer.cornerRadius = 15
         buttonSignUp.layer.borderWidth = 2
         buttonSignUp.layer.borderColor = Style.thirdColor.cgColor
+        buttonSignIn.titleLabel?.font = Style.fontPlaceholderLogin
         buttonSignUp.setTitleColor(Style.thirdColor, for: .normal)
     }
     

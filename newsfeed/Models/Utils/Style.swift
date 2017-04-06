@@ -17,6 +17,6 @@ struct Style {
     static var thirdColor = UIColor(red: 252/255, green: 91/255, blue: 32/255, alpha: 1.0)
     
     //Fonts NFLogin
-    static var fontTitleLogin = UIFont (name: "Avenir-Light", size: 50)
-    static var fontPlaceholderLogin = UIFont (name: "Avenir-Bold", size: 14)
+    static var fontTitleLogin = UIFont (name: "Rondalo", size: 50)
+    static var fontPlaceholderLogin = UIFont (name: "OCRB10PitchBT-Regular", size: 14)
 }
