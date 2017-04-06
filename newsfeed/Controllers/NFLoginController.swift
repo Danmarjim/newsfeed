@@ -37,7 +37,7 @@ class NFLoginController : NFBaseController{
         FIRAuth.auth()!.createUser(withEmail: emailUser, password: passUser) { user, error in
             super.hideLoadingIndicator()
             if error == nil {
-                self.createAlertWithCustomMessage(title: "Success", message: "Your registration has been successful", actionButtonTitle: "OK", preferredStyle: .alert)
+                self.signIn(emailUser: emailUser, passUser: passUser)
             } else {
                 self.createAlertWithCustomMessage(title: "Error", message: (error?.localizedDescription)!, actionButtonTitle: "OK", preferredStyle: .alert)
             }

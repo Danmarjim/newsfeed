@@ -38,6 +38,7 @@ class NFLoginViewController: NFBaseViewController  {
     func setupLayout() {
         titleLabel.font = Style.fontTitleLogin
         titleLabel.textColor = Style.secondColor
+        titleLabel.text = "NEWsFEED"
         
         textFieldLoginEmail.font = Style.fontPlaceholderLogin
         textFieldLoginEmail.layer.borderColor = Style.firstColor.cgColor
@@ -52,12 +53,14 @@ class NFLoginViewController: NFBaseViewController  {
         buttonSignIn.backgroundColor = Style.secondColor
         buttonSignIn.layer.cornerRadius = 15
         buttonSignIn.titleLabel?.font = Style.fontTextButtonLogin
+        buttonSignIn.setTitle("Sign In", for: .normal)
         
         buttonSignUp.layer.cornerRadius = 15
         buttonSignUp.layer.borderWidth = 2
         buttonSignUp.layer.borderColor = Style.thirdColor.cgColor
         buttonSignUp.titleLabel?.font = Style.fontTextButtonLogin
         buttonSignUp.setTitleColor(Style.thirdColor, for: .normal)
+        buttonSignUp.setTitle("Sign Up", for: .normal)
     }
     
     // MARK: Actions
