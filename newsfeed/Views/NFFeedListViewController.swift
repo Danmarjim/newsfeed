@@ -13,6 +13,8 @@ class NFFeedListViewController: UIViewController {
     var controller = NFFeedListController.sharedInstance()
     var items: [NFFeed] = []
     
+    @IBOutlet var collectionView: UICollectionView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -22,16 +24,37 @@ class NFFeedListViewController: UIViewController {
     }
     
     func getFeeds() {
-        items = controller.getFeeds()
+        controller.getFeeds { (feeds, error) in
+            self.items = feeds
+            self.collectionView.reloadData()
+        }
     }
     
     func setupNavigation() {
         navigationController?.navigationBar.barTintColor = Style.secondColor
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: Style.fontTextNavBar!]        
-        title = "News"
+        title = "NEWsFEED"
     }    
     
     func setupLayout() {
+        view.layoutIfNeeded()
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
+        self.automaticallyAdjustsScrollViewInsets = false;
+    }
+}
+
+extension NFFeedListViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "feed", for: indexPath) as? FeedViewCell)!
+        
+        cell.feed = self.items[indexPath.item]
+        return cell
     }
 }

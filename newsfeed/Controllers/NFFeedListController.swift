@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 protocol NFFeedControllerProtocol {
     
-    func getFeeds()
+    func getFeeds(_ completion: @escaping (_ feeds: Array<NFFeed>, _ error: NSError?) -> Void)
 }
 
 class NFFeedListController: NFBaseController {
@@ -26,9 +26,9 @@ class NFFeedListController: NFBaseController {
             instance = NFFeedListController()
         }
         return instance
-    }
+    }   
     
-    func getFeeds() -> Array<NFFeed> {
+    func getFeeds(_ completion: @escaping (_ feeds: Array<NFFeed>, _ error: NSError?) -> Void) {
         super.showLoadingIndicator()
         self.rootRef.observe(FIRDataEventType.value, with: { snapshot in
             super.hideLoadingIndicator()
@@ -39,7 +39,22 @@ class NFFeedListController: NFBaseController {
                 newItems.append(feed)
             }
             self.items = newItems
-        })
-        return items
+            completion (self.items, nil)
+        })        
+    }
+    
+    func setupFeedCell(feed: NFFeed, completion: @escaping (_ image: UIImage) -> Void) {
+        URLSession.shared.dataTask(with: NSURL(string: feed.picture)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                completion(image!)
+            })
+            
+        }).resume()
     }
 }
