@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Hero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-newsfeed.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D1E337563256422C51D6EDB341D6D72</key>
+		<key>4A3E211676B243619B026D147D272253</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64CA1B3DAE6F9B55FEF4AAF7D4EA22DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F8373D39452A980C1576E39F6C4F520</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DD6BC6F28B33D2CC54759DD5A2F50E44</key>
 		<dict>
 			<key>primary</key>
 			<true/>

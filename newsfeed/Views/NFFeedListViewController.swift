@@ -15,9 +15,15 @@ class NFFeedListViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let currentCell = sender as? FeedViewCell,
+            let vc = segue.destination as? NFInfoFeedViewController,
+            let currentCellIndex = collectionView.indexPath(for: currentCell) {
+            vc.selectedItem = items[currentCellIndex.count]
+        }
+    }
+
+    override func viewDidLoad() {
         getFeeds()
         setupLayout()
         setupNavigation()
@@ -32,7 +38,7 @@ class NFFeedListViewController: UIViewController {
     
     func setupNavigation() {
         navigationController?.navigationBar.barTintColor = Style.secondColor
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: Style.fontTextNavBar!]        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: Style.fontNavBar!]        
         title = "NEWsFEED"
     }    
     

@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class NFLoginViewController: NFBaseViewController  {
+class NFLoginViewController: UIViewController  {
     
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var titleLabel: UILabel!

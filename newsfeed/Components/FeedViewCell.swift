@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class FeedViewCell: UICollectionViewCell {
     
@@ -19,18 +20,21 @@ class FeedViewCell: UICollectionViewCell {
     var feed: NFFeed? {
         didSet {
             guard let feed = feed else { return }
+            let title = feed.title
             
             controller.setupFeedCell(feed: feed) { (image) in
                 self.pictureFeed.image = image
                 self.titleFeed.text = feed.title
-                
-                //Setup layout
-                self.titleFeed.textColor = UIColor.black
-                self.pictureFeed.layer.cornerRadius = 5
-                self.pictureFeed.clipsToBounds = true
-                self.backgroundTitle.backgroundColor = Style.thirdColorWithAlpha
-                self.backgroundTitle.layer.cornerRadius = 15
             }
+            
+            heroID = "\(title)"
+            
+            //Setup layout
+            self.titleFeed.textColor = UIColor.black
+            self.pictureFeed.layer.cornerRadius = 5
+            self.pictureFeed.clipsToBounds = true
+            self.backgroundTitle.backgroundColor = Style.thirdColorWithAlpha
+            self.backgroundTitle.layer.cornerRadius = 15
         }
     }
 }

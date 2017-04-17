@@ -12,9 +12,9 @@
 		8614C6001E96901E00096161 /* NFPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614C5FF1E96901E00096161 /* NFPeople.swift */; };
 		8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619C9D11E94ED2400A468D9 /* NFBaseController.swift */; };
 		86396FF01E954B7A00FEFDA8 /* NFFeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */; };
+		866F2ACE1EA2A2B200AE1BED /* NFInfoFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F2ACD1EA2A2B200AE1BED /* NFInfoFeedViewController.swift */; };
 		868102291E9667E400339637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868102251E9667E400339637 /* LaunchScreen.storyboard */; };
 		8681022A1E9667E400339637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 868102271E9667E400339637 /* Main.storyboard */; };
-		86979E601E965D53001B28B8 /* NFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979E5B1E965D53001B28B8 /* NFBaseViewController.swift */; };
 		86979E611E965D53001B28B8 /* NFFeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979E5C1E965D53001B28B8 /* NFFeedListViewController.swift */; };
 		86979E621E965D53001B28B8 /* NFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979E5D1E965D53001B28B8 /* NFLoginViewController.swift */; };
 		86A1B2E61E9B946200EDBDB8 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1B2E51E9B946200EDBDB8 /* FeedViewCell.swift */; };
@@ -34,9 +34,9 @@
 		8614C5FF1E96901E00096161 /* NFPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFPeople.swift; sourceTree = "<group>"; };
 		8619C9D11E94ED2400A468D9 /* NFBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseController.swift; sourceTree = "<group>"; };
 		86396FEF1E954B7A00FEFDA8 /* NFFeedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListController.swift; sourceTree = "<group>"; };
+		866F2ACD1EA2A2B200AE1BED /* NFInfoFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFInfoFeedViewController.swift; sourceTree = "<group>"; };
 		868102261E9667E400339637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = newsfeed/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		868102281E9667E400339637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = newsfeed/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		86979E5B1E965D53001B28B8 /* NFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFBaseViewController.swift; sourceTree = "<group>"; };
 		86979E5C1E965D53001B28B8 /* NFFeedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFFeedListViewController.swift; sourceTree = "<group>"; };
 		86979E5D1E965D53001B28B8 /* NFLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLoginViewController.swift; sourceTree = "<group>"; };
 		86A1B2E51E9B946200EDBDB8 /* FeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 			children = (
 				868102251E9667E400339637 /* LaunchScreen.storyboard */,
 				868102271E9667E400339637 /* Main.storyboard */,
-				86979E5B1E965D53001B28B8 /* NFBaseViewController.swift */,
 				86979E5C1E965D53001B28B8 /* NFFeedListViewController.swift */,
 				86979E5D1E965D53001B28B8 /* NFLoginViewController.swift */,
+				866F2ACD1EA2A2B200AE1BED /* NFInfoFeedViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,12 +194,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86B59ED01E93807400A95F67 /* Build configuration list for PBXNativeTarget "newsfeed" */;
 			buildPhases = (
+				6EEA65E0E8224CD14E92139A /* 📦 Check Pods Manifest.lock */,
 				C8B92DD53C5439AC6632C32D /* [CP] Check Pods Manifest.lock */,
 				86B59EBA1E93807400A95F67 /* Sources */,
 				86B59EBB1E93807400A95F67 /* Frameworks */,
 				86B59EBC1E93807400A95F67 /* Resources */,
 				5691E1030608A3206AB52455 /* [CP] Embed Pods Frameworks */,
 				100725CF2670E1BE183C3DBD /* [CP] Copy Pods Resources */,
+				6296B045EC6B1E0DCA4D1F0B /* 📦 Embed Pods Frameworks */,
+				49B7620774FC8B1E0BCAF206 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,6 +285,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		49B7620774FC8B1E0BCAF206 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5691E1030608A3206AB52455 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +313,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6296B045EC6B1E0DCA4D1F0B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EEA65E0E8224CD14E92139A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C8B92DD53C5439AC6632C32D /* [CP] Check Pods Manifest.lock */ = {
@@ -323,6 +371,7 @@
 				8614C5FE1E968EEA00096161 /* NFFeed.swift in Sources */,
 				8619C9D21E94ED2400A468D9 /* NFBaseController.swift in Sources */,
 				86DF70591E965B42009D4285 /* Style.swift in Sources */,
+				866F2ACE1EA2A2B200AE1BED /* NFInfoFeedViewController.swift in Sources */,
 				86F02E291E93DA7B008EAC89 /* NFLoginController.swift in Sources */,
 				86396FF01E954B7A00FEFDA8 /* NFFeedListController.swift in Sources */,
 				86979E611E965D53001B28B8 /* NFFeedListViewController.swift in Sources */,
@@ -330,7 +379,6 @@
 				86A1B2E61E9B946200EDBDB8 /* FeedViewCell.swift in Sources */,
 				86F02E251E93B32A008EAC89 /* NFUser.swift in Sources */,
 				8614C6001E96901E00096161 /* NFPeople.swift in Sources */,
-				86979E601E965D53001B28B8 /* NFBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,4 +12,13 @@ target 'newsfeed' do
     pod 'APESuperHUD', :git => 'https://github.com/apegroup/APESuperHUD.git'
     pod 'SwiftyJSON', :git =>'https://github.com/SwiftyJSON/SwiftyJSON.git'
     
+    pod 'Hero'
+    
+    post_install do |installer|
+        installer.pods_project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.0'
+            end
+        end
+    end
 end
