@@ -45,7 +45,6 @@ class NFFeedListController: NFBaseController {
     
     func setupFeedCell(feed: NFFeed, completion: @escaping (_ image: UIImage) -> Void) {
         URLSession.shared.dataTask(with: NSURL(string: feed.picture)! as URL, completionHandler: { (data, response, error) -> Void in
-            
             if error != nil {
                 print(error!)
                 return

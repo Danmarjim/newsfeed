@@ -18,19 +18,21 @@ class NFInfoFeedViewController: UIViewController {
     var controller = NFFeedListController.sharedInstance()
     
     override func viewDidLoad() {
+        setupLayout()
         setupFeed()
     }
     
+    func setupLayout() {
+        self.textFeed.textColor = Style.firstColor
+        self.titleFeed.textColor = Style.secondColor
+    }
+    
     func setupFeed() {
+        self.titleFeed.text = selectedItem.title
+        self.textFeed.text = selectedItem.text
+        
         controller.setupFeedCell(feed: selectedItem) { (image) in
             self.pictureFeed.image = image
-            self.titleFeed.text = self.selectedItem.title
-            self.textFeed.text = self.selectedItem.text
-            
-            //Setup layout
-            self.pictureFeed.layer.cornerRadius = 15
-            self.textFeed.textColor = Style.firstColor
-            self.titleFeed.textColor = Style.secondColor
         }
     }
     

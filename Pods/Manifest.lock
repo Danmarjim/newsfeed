@@ -56,7 +56,7 @@ CHECKOUT OPTIONS:
     :commit: c93268c65dc888f9140eb7a5ed9dd987c55d6fdf
     :git: https://github.com/apegroup/APESuperHUD.git
   SwiftyJSON:
-    :commit: a1d057f5b1e142ea823fcbe4d650bacd170a4246
+    :commit: f9afe967e2637db74ed93d75cf4967e3e26d9846
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
@@ -74,4 +74,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a58af476b81c4fde49bc6a1ee14466068ba0f298
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.0

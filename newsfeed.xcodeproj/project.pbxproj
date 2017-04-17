@@ -194,7 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86B59ED01E93807400A95F67 /* Build configuration list for PBXNativeTarget "newsfeed" */;
 			buildPhases = (
-				6EEA65E0E8224CD14E92139A /* 📦 Check Pods Manifest.lock */,
+				6EEA65E0E8224CD14E92139A /* [CP] Check Pods Manifest.lock */,
 				C8B92DD53C5439AC6632C32D /* [CP] Check Pods Manifest.lock */,
 				86B59EBA1E93807400A95F67 /* Sources */,
 				86B59EBB1E93807400A95F67 /* Frameworks */,
@@ -330,19 +330,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6EEA65E0E8224CD14E92139A /* 📦 Check Pods Manifest.lock */ = {
+		6EEA65E0E8224CD14E92139A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C8B92DD53C5439AC6632C32D /* [CP] Check Pods Manifest.lock */ = {
@@ -499,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E65F77949221C4132DB463B1 /* Pods-newsfeed.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = newsfeed/newsfeed.entitlements;
 				DEVELOPMENT_TEAM = HLC2ZTTHKH;
@@ -515,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 91194A5B8ACC789D57A8EB85 /* Pods-newsfeed.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = newsfeed/newsfeed.entitlements;
 				DEVELOPMENT_TEAM = HLC2ZTTHKH;

@@ -19,7 +19,7 @@ class NFFeedListViewController: UIViewController {
         if let currentCell = sender as? FeedViewCell,
             let vc = segue.destination as? NFInfoFeedViewController,
             let currentCellIndex = collectionView.indexPath(for: currentCell) {
-            vc.selectedItem = items[currentCellIndex.count]
+            vc.selectedItem = items[currentCellIndex.row]
         }
     }
 
