@@ -195,11 +195,6 @@
                                                         <constraint firstAttribute="trailing" secondItem="Jgb-sd-M2a" secondAttribute="trailing" constant="8" id="aLJ-ii-ybS"/>
                                                         <constraint firstAttribute="bottom" secondItem="Jgb-sd-M2a" secondAttribute="bottom" constant="5" id="hKN-eY-qrL"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <integer key="value" value="15"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                         </view>
@@ -265,11 +260,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="he5-7e-o8p"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-1C-eN3">
                                         <rect key="frame" x="16" y="210" width="269" height="21"/>

@@ -30,11 +30,14 @@ class FeedViewCell: UICollectionViewCell {
             heroID = "\(title)"
             
             //Setup layout
-            self.titleFeed.textColor = UIColor.black
-            self.pictureFeed.layer.cornerRadius = 5
-            self.pictureFeed.clipsToBounds = true
-            self.backgroundTitle.backgroundColor = Style.thirdColorWithAlpha
-            self.backgroundTitle.layer.cornerRadius = 15
+            titleFeed.textColor = UIColor.white
+            titleFeed.font = Style.fontFeedList
+            
+            pictureFeed.layer.cornerRadius = 5
+            pictureFeed.clipsToBounds = true
+            
+            backgroundTitle.backgroundColor = Style.thirdColor.withAlphaComponent(0.6)
+            backgroundTitle.layer.cornerRadius = 15
         }
     }
 }

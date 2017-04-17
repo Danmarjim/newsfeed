@@ -23,14 +23,17 @@ class NFInfoFeedViewController: UIViewController {
     }
     
     func setupLayout() {
-        self.textFeed.textColor = Style.firstColor
-        self.titleFeed.textColor = Style.secondColor
+        textFeed.textColor = Style.firstColor
+        textFeed.font = Style.fontTextInfoFeed
+        
+        titleFeed.textColor = Style.secondColor
+        titleFeed.font = Style.fontTitleInfoFeed
+        
+        titleFeed.text = selectedItem.title
+        textFeed.text = selectedItem.text
     }
     
     func setupFeed() {
-        self.titleFeed.text = selectedItem.title
-        self.textFeed.text = selectedItem.text
-        
         controller.setupFeedCell(feed: selectedItem) { (image) in
             self.pictureFeed.image = image
         }
