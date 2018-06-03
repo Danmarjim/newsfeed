@@ -22,10 +22,10 @@
 		86B59ED41E9380AD00A95F67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86B59ED31E9380AD00A95F67 /* GoogleService-Info.plist */; };
 		86F02E251E93B32A008EAC89 /* NFUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F02E241E93B32A008EAC89 /* NFUser.swift */; };
 		86F02E291E93DA7B008EAC89 /* NFLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F02E281E93DA7B008EAC89 /* NFLoginController.swift */; };
-		86FD1CE520C42F2F00E175A0 /* OCR-b.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86FD1CE020C42F2F00E175A0 /* OCR-b.ttf */; };
-		86FD1CE620C42F2F00E175A0 /* rondalo-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86FD1CE120C42F2F00E175A0 /* rondalo-regular.ttf */; };
 		86FD1CE720C42F2F00E175A0 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD1CE220C42F2F00E175A0 /* Style.swift */; };
 		86FD1CE820C42F2F00E175A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD1CE420C42F2F00E175A0 /* AppDelegate.swift */; };
+		86FD1CEB20C42FBF00E175A0 /* rondalo-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86FD1CE920C42FBF00E175A0 /* rondalo-regular.ttf */; };
+		86FD1CEC20C42FBF00E175A0 /* OCR-b.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86FD1CEA20C42FBF00E175A0 /* OCR-b.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +47,10 @@
 		86F02E241E93B32A008EAC89 /* NFUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFUser.swift; sourceTree = "<group>"; };
 		86F02E271E93D8FE008EAC89 /* newsfeed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = newsfeed.entitlements; sourceTree = "<group>"; };
 		86F02E281E93DA7B008EAC89 /* NFLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLoginController.swift; sourceTree = "<group>"; };
-		86FD1CE020C42F2F00E175A0 /* OCR-b.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OCR-b.ttf"; sourceTree = "<group>"; };
-		86FD1CE120C42F2F00E175A0 /* rondalo-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rondalo-regular.ttf"; sourceTree = "<group>"; };
 		86FD1CE220C42F2F00E175A0 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		86FD1CE420C42F2F00E175A0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86FD1CE920C42FBF00E175A0 /* rondalo-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rondalo-regular.ttf"; sourceTree = "<group>"; };
+		86FD1CEA20C42FBF00E175A0 /* OCR-b.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OCR-b.ttf"; sourceTree = "<group>"; };
 		91194A5B8ACC789D57A8EB85 /* Pods-newsfeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsfeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed.release.xcconfig"; sourceTree = "<group>"; };
 		E65F77949221C4132DB463B1 /* Pods-newsfeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsfeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-newsfeed/Pods-newsfeed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,8 +171,8 @@
 		86FD1CDF20C42F2F00E175A0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				86FD1CE020C42F2F00E175A0 /* OCR-b.ttf */,
-				86FD1CE120C42F2F00E175A0 /* rondalo-regular.ttf */,
+				86FD1CEA20C42FBF00E175A0 /* OCR-b.ttf */,
+				86FD1CE920C42FBF00E175A0 /* rondalo-regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -256,10 +256,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86FD1CE520C42F2F00E175A0 /* OCR-b.ttf in Resources */,
-				86FD1CE620C42F2F00E175A0 /* rondalo-regular.ttf in Resources */,
+				86FD1CEC20C42FBF00E175A0 /* OCR-b.ttf in Resources */,
 				86B59ED41E9380AD00A95F67 /* GoogleService-Info.plist in Resources */,
 				8681022A1E9667E400339637 /* Main.storyboard in Resources */,
+				86FD1CEB20C42FBF00E175A0 /* rondalo-regular.ttf in Resources */,
 				868102291E9667E400339637 /* LaunchScreen.storyboard in Resources */,
 				86B59EC91E93807400A95F67 /* Assets.xcassets in Resources */,
 			);
